@@ -23,25 +23,15 @@ const firebaseConfig = {
 @NgModule({
   imports: [
     BrowserModule,
+    AppRoutingModule,
     // 3. Initialize
-    AngularFireModule.initializeApp(config),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule // storage
   ],
-  declarations: [ AppComponent, Componente1Component ],
+  declarations: [ AppComponent, Componente1Component ],providers: [],
   bootstrap: [ AppComponent ]
 })
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
 export class AppModule { }
